@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+/* Container */
+.container-slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /*zruší přesahy */
+}
+
+/* levá část barva text */
+
+.slide-left{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: transform .5s linear;
+}
+
+.slide-left > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.slide-left h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+}
+
+.color-1-slider {
+    background-color: rgb(87, 161, 190);
+}
+
+.color-2-slider {
+    background-color: rgb(158, 114, 179);
+}
+
+.color-3-slider {
+    background-color: rgb(65, 153, 109);
+}
+
+.color-4-slider {
+    background-color: rgb(202, 176, 29);
+}
+
+/* pravá část obrázky */
+.slide-right {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    top: 0;
+    left: 35%;
+
+    transition: transform .5s linear;
+}
+
+.slide-right > div {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.image-1 {
+    background-image: url(img/obr1.jpg);
+}
+
+.image-2 {
+    background-image: url(img/obr2.jpg);
+}
+
+.image-3 {
+    background-image: url(img/obr3.jpg);
+}
+
+.image-4 {
+    background-image: url(img/obr4.jpg);
+}
+
+/* row button Up and Down */
+.arrow-buttons .arrow {
+    position: absolute;
+    z-index: 100;
+    left: 35%;
+    top: 50%;
+}
+
+.arrow img {
+    width: 50px;
+}
+
+.arrow-down img {
+    transform: translateX(-100%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.arrow-down img:hover {
+    border: 1px solid transparent;
+}
+
+
+.arrow-up img {
+    transform: translateY(-100%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.arrow-up img:hover {
+    border: 1px solid transparent;
+}
